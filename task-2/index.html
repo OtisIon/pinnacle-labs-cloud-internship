@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>daily dashboard</h1>
+
+    <div class="card">
+      <div id="time"></div>
+      <div id="date"></div>
+    </div>
+
+    <div class="card">
+      <h2>daily goal</h2>
+
+      <div class="input-row">
+        <input type="text" id="goalInput" placeholder="what matters today?" onkeydown="if(event.key==='Enter') saveGoal()">
+        <button onclick="saveGoal()">save</button>
+        <button onclick="clearGoal()">clear</button>
+      </div>
+
+      <p id="goalDisplay"></p>
+    </div>
+
+    <div class="card">
+      <h2>tasks</h2>
+
+      <div class="input-row">
+        <input type="text" id="taskInput" placeholder="add task..." onkeydown="if(event.key==='Enter') addTask()">
+        <button onclick="addTask()">add</button>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <ul id="taskList"></ul>
+      <p id="stats"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
